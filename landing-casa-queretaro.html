@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Nueva Casa en Querétaro | Desde $1,409,352</title>
+<meta name="description" content="Casa nueva en Querétaro desde $1,409,352. Acepta crédito Infonavit. Agenda tu visita hoy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #0B2038;
+    --navy-deep: #071627;
+    --navy-soft: #16324f;
+    --gold: #C6A257;
+    --gold-light: #E8D8A8;
+    --paper: #F8F6F1;
+    --paper-2: #F1EDE3;
+    --ink: #1A2431;
+    --ink-soft: #5B6675;
+    --white: #FFFFFF;
+    --line: rgba(11,32,56,0.12);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+  }
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em;}
+  .container{max-width:1120px; margin:0 auto; padding:0 24px;}
+  section{padding:96px 0;}
+  @media (max-width:768px){ section{padding:64px 0;} }
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(248,246,241,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px; max-width:1120px; margin:0 auto;
+  }
+  .logo-mark{display:flex; align-items:center; gap:10px;}
+  .logo-mark svg{width:26px; height:26px;}
+  .logo-text{font-family:'Fraunces', serif; font-size:18px; font-weight:600; color:var(--navy);}
+  .logo-text span{color:var(--gold);}
+  .header-cta{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--navy); color:var(--white);
+    padding:11px 20px; font-size:13px; font-weight:600;
+    border-radius:var(--radius);
+    letter-spacing:0.01em;
+    transition:background .25s ease;
+  }
+  .header-cta:hover{background:var(--navy-soft);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--navy);
+    color:var(--white);
+    padding:168px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(198,162,87,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(198,162,87,0.06) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity:0.5;
+  }
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:56px; align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; gap:48px;} }
+  .hero-eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-light);
+    border:1px solid rgba(198,162,87,0.4); padding:7px 14px; border-radius:20px;
+    margin-bottom:28px;
+  }
+  .hero-eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--gold); animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.3;}}
+  .hero h1{
+    font-size:clamp(34px, 4.4vw, 54px);
+    line-height:1.08;
+    font-weight:600;
+    color:var(--white);
+  }
+  .hero h1 .price{
+    display:block; margin-top:10px;
+    color:var(--gold-light);
+    font-weight:300;
+    font-size:0.62em;
+  }
+  .hero p.sub{
+    margin-top:22px; font-size:17px; color:rgba(255,255,255,0.72);
+    max-width:480px; font-weight:400;
+  }
+  .hero-actions{margin-top:38px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(135deg, #D6B876, var(--gold));
+    color:var(--navy-deep); font-weight:700; font-size:15px;
+    padding:16px 26px; border-radius:var(--radius);
+    box-shadow:0 8px 24px rgba(198,162,87,0.25);
+    transition:transform .2s ease, box-shadow .2s ease;
+    border:none; cursor:pointer;
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 12px 28px rgba(198,162,87,0.35);}
+  .btn-secondary{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid rgba(255,255,255,0.3); color:var(--white);
+    font-weight:600; font-size:15px; padding:16px 24px; border-radius:var(--radius);
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .btn-secondary:hover{border-color:var(--gold); background:rgba(198,162,87,0.08);}
+  .hero-stats{
+    display:flex; gap:32px; margin-top:48px; padding-top:28px;
+    border-top:1px solid rgba(255,255,255,0.14);
+  }
+  .hero-stats div{font-family:'IBM Plex Mono', monospace;}
+  .hero-stats strong{display:block; font-size:22px; color:var(--gold-light); font-weight:500;}
+  .hero-stats span{font-size:11px; color:rgba(255,255,255,0.55); letter-spacing:0.05em; text-transform:uppercase;}
+
+  /* ---------- Hero blueprint illustration ---------- */
+  .blueprint-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(198,162,87,0.25);
+    border-radius:4px;
+    padding:28px;
+    position:relative;
+  }
+  .blueprint-card svg{width:100%; height:auto;}
+  .blueprint-label{
+    font-family:'IBM Plex Mono', monospace; font-size:11px;
+    color:var(--gold-light); letter-spacing:0.1em; text-transform:uppercase;
+    display:flex; justify-content:space-between; margin-bottom:16px;
+    opacity:0.7;
+  }
+
+  /* ---------- Sticky WhatsApp ---------- */
+  .wa-float{
+    position:fixed; right:22px; bottom:22px; z-index:200;
+    display:flex; align-items:center; gap:10px;
+    background:#1F9C4C; color:#fff; padding:14px 20px;
+    border-radius:50px; box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    font-weight:700; font-size:14px;
+    transition:transform .2s ease;
+  }
+  .wa-float:hover{transform:translateY(-3px);}
+  .wa-float svg{width:22px; height:22px; flex-shrink:0;}
+  @media (max-width:600px){
+    .wa-float span{display:none;}
+    .wa-float{padding:14px; border-radius:50%;}
+  }
+
+  /* ---------- Section headers ---------- */
+  .section-head{max-width:600px; margin-bottom:52px;}
+  .section-head h2{font-size:clamp(26px,3vw,36px); color:var(--navy); margin-top:12px;}
+  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:16px;}
+
+  /* ---------- Features ---------- */
+  .features-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  @media (max-width:800px){ .features-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .features-grid{grid-template-columns:1fr;} }
+  .feature-cell{background:var(--white); padding:32px 28px;}
+  .feature-cell .num{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold); letter-spacing:0.1em;}
+  .feature-cell h3{font-size:18px; color:var(--navy); margin-top:14px; font-weight:600; font-family:'Inter',sans-serif;}
+  .feature-cell p{font-size:14px; color:var(--ink-soft); margin-top:8px;}
+
+  /* ---------- Benefits ---------- */
+  .benefits-section{background:var(--navy); color:var(--white);}
+  .benefits-section .section-head p{color:rgba(255,255,255,0.65);}
+  .benefits-section .eyebrow{color:var(--gold-light);}
+  .benefits-list{display:grid; grid-template-columns:repeat(2,1fr); gap:18px 40px;}
+  @media (max-width:640px){ .benefits-list{grid-template-columns:1fr;} }
+  .benefit-item{display:flex; gap:14px; align-items:flex-start; padding:18px 0; border-bottom:1px solid rgba(255,255,255,0.1);}
+  .benefit-item svg{width:20px; height:20px; flex-shrink:0; margin-top:2px; color:var(--gold);}
+  .benefit-item p{font-size:15.5px; color:rgba(255,255,255,0.88); font-weight:500;}
+
+  /* ---------- Floor plan ---------- */
+  .plan-grid{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--line);}
+  @media (max-width:700px){ .plan-grid{grid-template-columns:1fr;} }
+  .plan-col{padding:40px; background:var(--white);}
+  .plan-col:first-child{border-right:1px solid var(--line);}
+  @media (max-width:700px){ .plan-col:first-child{border-right:none; border-bottom:1px solid var(--line);} }
+  .plan-col .level-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--gold);
+    letter-spacing:0.12em; text-transform:uppercase; margin-bottom:6px; display:block;
+  }
+  .plan-col h3{font-size:22px; color:var(--navy); margin-bottom:22px;}
+  .plan-col ul{list-style:none;}
+  .plan-col li{
+    display:flex; align-items:center; gap:12px;
+    padding:12px 0; border-bottom:1px dashed var(--line);
+    font-size:15px; color:var(--ink);
+  }
+  .plan-col li:last-child{border-bottom:none;}
+  .plan-col li::before{
+    content:""; width:6px; height:6px; background:var(--gold); flex-shrink:0;
+    transform:rotate(45deg);
+  }
+
+  /* ---------- Mid CTA ---------- */
+  .mid-cta{
+    background:var(--paper-2); border:1px solid var(--line); border-radius:4px;
+    padding:48px; margin-top:64px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;
+  }
+  .mid-cta h3{color:var(--navy); font-size:24px; max-width:420px;}
+  .mid-cta p{color:var(--ink-soft); font-size:14.5px; margin-top:8px;}
+
+  /* ---------- FAQ ---------- */
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-q{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:24px 0; cursor:pointer; font-weight:600; font-size:16.5px; color:var(--navy);
+  }
+  .faq-q .icon{
+    width:22px; height:22px; flex-shrink:0; position:relative;
+    transition:transform .3s ease;
+  }
+  .faq-q .icon::before, .faq-q .icon::after{
+    content:""; position:absolute; background:var(--gold);
+  }
+  .faq-q .icon::before{width:14px; height:2px; top:10px; left:4px;}
+  .faq-q .icon::after{width:2px; height:14px; top:4px; left:10px; transition:opacity .2s ease;}
+  .faq-item.open .icon::after{opacity:0;}
+  .faq-a{
+    max-height:0; overflow:hidden; transition:max-height .35s ease;
+  }
+  .faq-a p{padding-bottom:24px; color:var(--ink-soft); font-size:15px; max-width:640px;}
+
+  /* ---------- Form ---------- */
+  .form-section{background:var(--navy-deep); color:var(--white); position:relative; overflow:hidden;}
+  .form-section::after{
+    content:""; position:absolute; right:-120px; top:-120px; width:400px; height:400px;
+    border:1px solid rgba(198,162,87,0.15); border-radius:50%;
+  }
+  .form-wrap{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;
+  }
+  @media (max-width:860px){ .form-wrap{grid-template-columns:1fr;} }
+  .form-wrap h2{color:var(--white); font-size:clamp(26px,3vw,34px);}
+  .form-wrap .section-head p{color:rgba(255,255,255,0.65);}
+  form{background:var(--white); border-radius:4px; padding:36px; box-shadow:0 30px 60px rgba(0,0,0,0.3);}
+  .field{margin-bottom:18px;}
+  .field label{display:block; font-size:12.5px; font-weight:600; color:var(--navy); margin-bottom:7px; letter-spacing:0.02em;}
+  .field input{
+    width:100%; padding:13px 14px; border:1px solid var(--line); border-radius:2px;
+    font-family:'Inter', sans-serif; font-size:14.5px; color:var(--ink);
+    background:var(--paper);
+    transition:border-color .2s ease;
+  }
+  .field input:focus{outline:none; border-color:var(--gold);}
+  .form-submit{
+    width:100%; background:var(--navy); color:var(--white); font-weight:700;
+    padding:15px; border:none; border-radius:2px; font-size:15px; cursor:pointer;
+    margin-top:6px; transition:background .2s ease;
+  }
+  .form-submit:hover{background:var(--navy-soft);}
+  .form-note{font-size:12px; color:var(--ink-soft); text-align:center; margin-top:14px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy-deep); color:rgba(255,255,255,0.45); padding:32px 0; text-align:center; font-size:13px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#C6A257" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+      <span class="logo-text">Casa<span>Nueva</span> QRO</span>
+    </div>
+    <a href="#contacto" class="header-cta">Agendar visita</a>
+  </div>
+</header>
+
+<a href="https://wa.me/524422319291?text=Hola%2C%20me%20interesa%20la%20casa%20desde%20%241%2C409%2C352%20en%20Quer%C3%A9taro.%20%C2%BFMe%20pueden%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.19c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.7-.63-3-1.3-4.95-4.33-5.1-4.53-.15-.2-1.22-1.62-1.22-3.09s.77-2.19 1.04-2.49c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.86 2.08.93 2.23.08.15.13.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.61.17.3.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.36 1.46.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.83 2.05 .98.3.15.5.23.58.35.08.13.08.75-.17 1.45z"/></svg>
+  <span>Escríbenos por WhatsApp</span>
+</a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-eyebrow"><span class="dot"></span> Preventa con inventario limitado</div>
+      <h1>Tu nueva casa en Querétaro <span class="price">desde $1,409,352</span></h1>
+      <p class="sub">Vive en un desarrollo moderno, con excelente ubicación y áreas verdes diseñadas para tu familia. Aprovecha tu Crédito Infonavit y estrena casa este año.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/524422319291?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20casa%20desde%20%241%2C409%2C352" class="btn-primary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.83 14.19c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.7-.63-3-1.3-4.95-4.33-5.1-4.53-.15-.2-1.22-1.62-1.22-3.09s.77-2.19 1.04-2.49c.27-.3.6-.37.8-.37.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.86 2.08.93 2.23.08.15.13.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.45.53-.15.15-.3.31-.13.61.17.3.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.36 1.46.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.68-.15.28.1 1.75.83 2.05.98.3.15.5.23.58.35.08.13.08.75-.17 1.45z"/></svg>
+          Solicitar información por WhatsApp
+        </a>
+        <a href="#contacto" class="btn-secondary">Agendar visita →</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>73.48 m²</strong><span>Construcción</span></div>
+        <div><strong>3</strong><span>Recámaras</span></div>
+        <div><strong>2</strong><span>Niveles</span></div>
+        <div><strong>1</strong><span>Cochera</span></div>
+      </div>
+    </div>
+    <div class="blueprint-card">
+      <div class="blueprint-label"><span>Planta arquitectónica</span><span>73.48 m²</span></div>
+      <svg viewBox="0 0 400 320" fill="none" stroke="#C6A257" stroke-width="1.4">
+        <rect x="20" y="20" width="360" height="280" stroke-opacity="0.5"/>
+        <line x1="20" y1="150" x2="380" y2="150" stroke-opacity="0.4"/>
+        <line x1="230" y1="20" x2="230" y2="150" stroke-opacity="0.4"/>
+        <line x1="230" y1="150" x2="230" y2="300" stroke-opacity="0.4" stroke-dasharray="4 3"/>
+        <line x1="20" y1="230" x2="230" y2="230" stroke-opacity="0.4" stroke-dasharray="4 3"/>
+        <text x="45" y="90" fill="#E8D8A8" stroke="none" font-family="IBM Plex Mono" font-size="11">SALA / COMEDOR</text>
+        <text x="255" y="90" fill="#E8D8A8" stroke="none" font-family="IBM Plex Mono" font-size="11">COCINA</text>
+        <text x="255" y="190" fill="#E8D8A8" stroke="none" font-family="IBM Plex Mono" font-size="11">RECÁMARA PB</text>
+        <text x="45" y="270" fill="#E8D8A8" stroke="none" font-family="IBM Plex Mono" font-size="11">JARDÍN / PATIO</text>
+        <path d="M20 150 A20 20 0 0 0 40 130" stroke-opacity="0.3"/>
+        <path d="M230 150 A18 18 0 0 1 248 132" stroke-opacity="0.3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="caracteristicas">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Ficha técnica</span>
+      <h2>Características principales</h2>
+      <p>Todo lo que necesitas saber sobre tu nueva casa, en un solo vistazo.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-cell"><span class="num">01</span><h3>Precio desde</h3><p>$1,409,352 MXN</p></div>
+      <div class="feature-cell"><span class="num">02</span><h3>Construcción</h3><p>73.48 m² distribuidos en 2 niveles</p></div>
+      <div class="feature-cell"><span class="num">03</span><h3>Recámaras</h3><p>3 recámaras, una en planta baja</p></div>
+      <div class="feature-cell"><span class="num">04</span><h3>Baño completo</h3><p>1 baño completo con acabados de calidad</p></div>
+      <div class="feature-cell"><span class="num">05</span><h3>Cocina</h3><p>Con barra de granito, lista para equipar</p></div>
+      <div class="feature-cell"><span class="num">06</span><h3>Exteriores</h3><p>Jardín posterior y patio de servicio</p></div>
+      <div class="feature-cell"><span class="num">07</span><h3>Cochera</h3><p>Espacio techado para un automóvil</p></div>
+      <div class="feature-cell"><span class="num">08</span><h3>Crédito</h3><p>Compatible con Crédito Infonavit</p></div>
+      <div class="feature-cell"><span class="num">09</span><h3>Entrega</h3><p>Desarrollo nuevo, disponibilidad limitada</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Por qué esta casa</span>
+      <h2>Beneficios pensados para tu familia</h2>
+    </div>
+    <div class="benefits-list">
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Desarrollo nuevo, a estrenar</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Excelente distribución de espacios</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Áreas verdes dentro del desarrollo</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Juegos infantiles para los más pequeños</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Acabados de excelente calidad</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Ideal para familias en crecimiento</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Ideal para Crédito Infonavit</p></div>
+      <div class="benefit-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><p>Ubicación con acceso a vialidades principales</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLAN -->
+<section id="distribucion">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Distribución</span>
+      <h2>Conoce cada espacio de tu casa</h2>
+      <p>Dos niveles diseñados para aprovechar cada metro cuadrado.</p>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-col">
+        <span class="level-tag">Nivel 1</span>
+        <h3>Planta baja</h3>
+        <ul>
+          <li>Sala</li>
+          <li>Comedor</li>
+          <li>Cocina con barra de granito</li>
+          <li>Recámara</li>
+          <li>Baño completo</li>
+          <li>Patio de servicio</li>
+          <li>Jardín</li>
+        </ul>
+      </div>
+      <div class="plan-col">
+        <span class="level-tag">Nivel 2</span>
+        <h3>Planta alta</h3>
+        <ul>
+          <li>Recámara principal</li>
+          <li>Segunda recámara</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mid-cta">
+      <div>
+        <h3>¿Te imaginas viviendo aquí?</h3>
+        <p>Agenda una visita y conoce esta excelente oportunidad para estrenar casa.</p>
+      </div>
+      <a href="https://wa.me/524422319291?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20la%20casa%20desde%20%241%2C409%2C352" class="btn-primary" target="_blank" rel="noopener">Agendar mi visita →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container" style="max-width:760px;">
+    <div class="section-head">
+      <span class="eyebrow">Dudas frecuentes</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">¿Aceptan Crédito Infonavit? <span class="icon"></span></div>
+        <div class="faq-a"><p>Sí, esta casa acepta Crédito Infonavit. También podemos orientarte sobre otras opciones de financiamiento disponibles.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Tiene áreas verdes? <span class="icon"></span></div>
+        <div class="faq-a"><p>Sí, el desarrollo cuenta con áreas verdes diseñadas para el disfrute de toda la familia.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Cuenta con juegos infantiles? <span class="icon"></span></div>
+        <div class="faq-a"><p>Sí, hay juegos infantiles dentro del desarrollo, ideales para los más pequeños de la casa.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">¿Hay disponibilidad? <span class="icon"></span></div>
+        <div class="faq-a"><p>El inventario cambia constantemente, por lo que es recomendable solicitar información actualizada antes de tomar tu decisión.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="contacto">
+  <div class="container form-wrap">
+    <div class="section-head" style="margin-bottom:0;">
+      <span class="eyebrow">Último paso</span>
+      <h2>Agenda una visita y conoce esta excelente oportunidad para estrenar casa</h2>
+      <p>Déjanos tus datos y te contactaremos por WhatsApp o llamada para coordinar tu visita.</p>
+    </div>
+    <form id="leadForm">
+      <div class="field">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+      </div>
+      <div class="field">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Tu número de WhatsApp" required>
+      </div>
+      <div class="field">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+      </div>
+      <button type="submit" class="form-submit">Quiero conocer esta casa</button>
+      <p class="form-note">Al enviar aceptas ser contactado por nuestro equipo de ventas.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Casa Nueva Querétaro · Información sujeta a cambios sin previo aviso. Disponibilidad de inventario limitada.
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Form -> redirect to WhatsApp with prefilled message
+  document.getElementById('leadForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const correo = document.getElementById('correo').value;
+    const msg = `Hola, quiero conocer la casa desde $1,409,352 en Querétaro.%0A%0ANombre: ${encodeURIComponent(nombre)}%0ATeléfono: ${encodeURIComponent(telefono)}%0ACorreo: ${encodeURIComponent(correo)}`;
+    window.open(`https://wa.me/524422319291?text=${msg}`, '_blank');
+  });
+</script>
+
+</body>
+</html>
